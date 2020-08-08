@@ -29,12 +29,25 @@ Tips: Convert existing DB to use utf8
 
 * Use `uuidgen` command to generate uique ID
 
+### 3a. Setup php
+
+The `/usr/bin/php` that comes with MacOX does not include `php-cgi` ?
+
+We can try to install latest version with `brew install php`, but is failing due to python3.8 issue?
+
+Now, we need to try installing it manually from source:
+
+1. Download source [`php-7.4.9.tar.gz`](https://www.php.net/downloads)
+2. Run `brew install libiconv`
+3. Run `./configure --prefix=/usr/local --with-iconv=/usr/local/opt/libiconv`
+4. Run `make`
+5. Run `sudo make install`
+
 ### 3. Setup a web server
 
-TODO: Not working :(
-
-1. Install latest php and web server `brew install php lighttpd`
+1. Install latest php and web server `brew install lighttpd`
 2. Run `lighttpd -D -f lighttpd/lighttpd.conf`
+
 
 ### 4. Run wordpress install script
 
