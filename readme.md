@@ -17,11 +17,14 @@ mysql -u root
 ```
 
 ```sql
-CREATE USER 'zemian'@'localhost' IDENTIFIED BY 'test123';
+CREATE USER 'zemian'@'localhost' IDENTIFIED WITH mysql_native_password BY 'test123';
 CREATE DATABASE wordpress CHARACTER SET utf8 COLLATE utf8_general_ci;
 GRANT ALL PRIVILEGES ON wordpress.* TO 'zemian'@'localhost';
 FLUSH PRIVILEGES;
 ```
+
+NPTE: If you are using PHP 7.4 with `mysqli`, then you need to use `mysql_native_password`.
+See https://stackoverflow.com/questions/50026939/php-mysqli-connect-authentication-method-unknown-to-the-client-caching-sha2-pa
 
 Tips: Convert existing DB to use utf8
 
@@ -29,7 +32,7 @@ Tips: Convert existing DB to use utf8
 
 ### 2. Setup wp-config.php
 
-* Use `uuidgen` command to generate uique ID
+* Use https://api.wordpress.org/secret-key/1.1/salt/ to generate uique IDs
 
 ### 3a. Setup php
 
