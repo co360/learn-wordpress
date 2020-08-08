@@ -31,14 +31,10 @@ Tips: Convert existing DB to use utf8
 
 ### 3. Setup a web server
 
+TODO: Not working :(
 
-
-#### About NGINX server
-
-NOTE: The nginx web server is mainly used to serve static files and proxy to other app server!
-You would need app server such as Apache HTPTD or NGINXUnit that actually can run PHP app first.
-
-ref: https://www.nginx.com/resources/wiki/start/topics/recipes/wordpress/
+1. Install latest php and web server `brew install php lighttpd`
+2. Run `lighttpd -D -f lighttpd/lighttpd.conf`
 
 ### 4. Run wordpress install script
 
