@@ -1,5 +1,7 @@
 This repo contains [wordpress](https://wordpress.org) v5.4.2 source and it's for learning purpose.
 
+NOTE: These are Zemian's note. There is a `readme.html` from the original WordPress source
+that's not related to this readme.
 
 ## Installation
 
@@ -45,9 +47,9 @@ Now, we need to try installing it manually from source:
 
 ### 3. Setup a web server
 
-1. Install latest php and web server `brew install lighttpd`
+1. Run `brew install lighttpd`
 2. Run `lighttpd -D -f lighttpd/lighttpd.conf`
-
+3. Open http://localhost:3000/
 
 ### 4. Run wordpress install script
 
