@@ -41,9 +41,11 @@ Now, we need to try installing it manually from source:
 
 1. Download source [`php-7.4.9.tar.gz`](https://www.php.net/downloads)
 2. Run `brew install libiconv`
-3. Run `./configure --prefix=/usr/local --with-iconv=/usr/local/opt/libiconv`
+3. Run `./configure --prefix=/usr/local --with-iconv=/usr/local/opt/libiconv --enable-sockets --with-mysqli=mysqlnd`
 4. Run `make`
 5. Run `sudo make install`
+
+NOTE: PHP 7 uses option `--with-mysqli` instead of `--with-mysql`. The `mysqlnd` is a PHP native driver.
 
 ### 3. Setup a web server
 
@@ -53,4 +55,4 @@ Now, we need to try installing it manually from source:
 
 ### 4. Run wordpress install script
 
-	http://example.com/wp-admin/install.php
+	http://localhost:3000/wp-admin/install.php
