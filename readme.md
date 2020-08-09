@@ -38,9 +38,9 @@ Tips: Convert existing DB to use utf8
 
 The `/usr/bin/php` that comes with MacOX does not include `php-cgi` ?
 
-We can try to install latest version with `brew install php`, but is failing due to python3.8 issue?
+We can try to install latest version with `brew install php`
 
-Now, we need to try installing it manually from source:
+#### Alternative option: Installing php by building from source
 
 1. Download source [`php-7.4.9.tar.gz`](https://www.php.net/downloads)
 2. Run `brew install libiconv`
